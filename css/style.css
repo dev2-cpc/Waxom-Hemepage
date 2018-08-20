@@ -50,7 +50,6 @@ svg path {
     color: #c7b299;
 }
 .navbar .btn-primary {
-	display: none;
     font-size: 36px;
     background-color: transparent;
     border: none;
@@ -74,14 +73,19 @@ svg path {
 .icon-menu {
     fill: #fff;
 }
-.navbar .modal-content {
-    text-align: center;
+.dropdown {
+    width: 100%;
+    display: none;
 }
-.navbar .modal-content a {
+.dropdown .dropdown-item {
     color: #000;
 }
-.navbar .modal-content a:hover {
-    color: #c7b299;
+.dropdown .dropdown-item:hover {
+    background-color: transparent;
+}
+.dropdown .dropdown-menu {
+    width: 100%;
+    text-align: center;
 }
 .carousel-item {
     color: #fff;
@@ -158,9 +162,6 @@ svg path {
 .page-description-s2 p {
     font-size: 14px;
 }
-.Web-and-app {
-    padding: 0 20px;
-}
 .icon-s2 {
     margin-bottom: 30px;
 }
@@ -175,10 +176,7 @@ svg path {
     stroke:inherit;
     stroke-width:inherit;
     }
-    .Web-and-app:hover .icon-s2, .Web-and-app:hover h3, .Web-and-app:hover .line-s2, 
-    .Development:hover .icon-s2, .Development:hover h3, .Development:hover .line-s2,
-    .Customization:hover .icon-s2, .Customization:hover h3, .Customization:hover .line-s2,
-    .Marketing:hover .icon-s2, .Marketing:hover h3, .Marketing:hover .line-s2 {
+    .s2-description:hover .icon-s2, .s2-description:hover h3, .s2-description:hover .line-s2 {
     fill: #c7b299;
     color: #c7b299;
     transition: all 0.5s ease-in-out;
@@ -843,9 +841,11 @@ and (max-width: 992px) {
     }
     .navbar .navbar-nav {
 		display: none;
-	}
-	.navbar .btn-primary {
+    }
+    .dropdown {
         display: block;
+    }
+	.navbar .btn-primary {
         position: absolute;
         top: 50%;
         left: 5%;
@@ -864,11 +864,10 @@ and (max-width: 992px) {
     }
 
     #block2 {
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
     }
     .page-description-s2 {
-        display: flex;
         flex-wrap: wrap;
     }
     .page-description-s2 div {
